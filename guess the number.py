@@ -24,6 +24,6 @@ class GuessTheNumber:
         else:
             print("Вы проиграли")
 
-a = GuessTheNumber(1, 100, 15)
+a = GuessTheNumber(1, 200, 15)
 a.game_number()
 
