@@ -24,57 +24,6 @@ class GuessTheNumber:
         else:
             print("Вы проиграли")
 
-a = GuessTheNumber(1, 10, 5)
+a = GuessTheNumber(1, 100, 15)
 a.game_number()
 
-
-# 2. Задача про треугольники
-
-class Triangle:
-    def __init__(self, a:int, b:int, c:int)->None:
-        self.a = a
-        self.b = b
-        self.c = c
-
-
-    def triangle_true(self)->str:
-        if self.a < self.b + self.c and self.b < self.a + self.c and self.c < self.a + self.b:
-            if a == self.b == self.c:
-                return ("Треугольник равносторонний")
-            elif a == self.b or self.b == self.c or self.c == a:
-                return ("Треугольник равнобедренный")
-        else:
-            return ("Треугольник не существует")
-
-
-a = Triangle(6, 5, 5)
-print(a.triangle_true())
-
-
-# Задание кол-во встечаемых слов
-
-
-text = """Универсальный фиксатор для бровей PÚSY Brow Fix PROFESSIONAL by Илона Дрожь —
-это не только женская косметика класса люкс, но и новое слово в beauty индустрии.
-"""
-
-
-class WordFrequency:
-    def __init__(self, word:str, word_frequency:int)->None:
-        self.word = word
-        self.word_frequency = word_frequency
-    def word_count(self):
-        for i in self.word:
-            if i in ",.!:-—":
-                self.word = self.word.replace(i, ' ')
-        self.word = self.word.lower().split()
-        res = {}
-        for i in self.word:
-            res[i] = self.word.count(i)
-        res = sorted(res.items(), key=lambda item: item[1], reverse=True)
-        for i in range(self.word_frequency):
-            print(f"{res[i][0]} - встречяется {res[i][1]} раз")
-
-
-a = WordFrequency(text, 5)
-a.word_count()
