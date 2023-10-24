@@ -1,4 +1,4 @@
-# Программа угадай число
+# Игра угадай число
 
 import random as rd
 class GuessTheNumber:
